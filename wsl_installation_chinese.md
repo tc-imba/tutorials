@@ -70,7 +70,7 @@ $ sudo service ssh stop
 $ sudo /usr/sbin/sshd -d
 ```
 
-如果你看到以下信息，则需要手动配置
+注意输出的信息
 
 ```
 debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
@@ -88,7 +88,7 @@ debug1: key_load_public: No such file or directory
 Could not load host key: /etc/ssh/ssh_host_ed25519_key
 ```
 
-如果看到以上信息，重新安装 `openssh-server` 就可以解决问题
+如果输出信息包括以上信息，即找不到 key，重新安装 `openssh-server` 就可以解决问题
 
 ```bash
 $ sudo apt purge openssh-server
